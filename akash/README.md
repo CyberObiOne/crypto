@@ -2,15 +2,19 @@ First of all update your current system (Ubuntu) sudo apt update sudo apt instal
 
 Set variables
 
-export AKASH_NET="https://raw.githubusercontent.com/ovrclk/net/master/mainnet" export AKASH_VERSION="$(curl -s "$AKASH_NET/version.txt")"
+#export AKASH_NET="https://raw.githubusercontent.com/ovrclk/net/master/mainnet" export AKASH_VERSION="$(curl -s "$AKASH_NET/version.txt")"
 
-export KEY_NAME="Key_name" #Change to yourself
+#export KEY_NAME="Key_name" #Change to yourself
 
-export KEYRING_BACKEND="os" export AKASH_CHAIN_ID="$(curl -s "$AKASH_NET/chain-id.txt")" export AKASH_NODE="$(curl -s "$AKASH_NET/rpc-nodes.txt" | shuf -n 1)"
+#export KEYRING_BACKEND="os" export AKASH_CHAIN_ID="$(curl -s "$AKASH_NET/chain-id.txt")" export AKASH_NODE="$(curl -s "$AKASH_NET/rpc-nodes.txt" | shuf -n 1)"
 
 Install Akash CLI Tool and copy it to folder, that includes into PATH:
 
-wget https://github.com/ovrclk/akash/releases/download/v0.12.1/akash_0.12.1_linux_amd64.zip unzip akash_0.12.1_linux_amd64.zip cd akash_0.12.1_linux_amd64 sudo cp akash /usr/local/bin cd ~
+wget https://github.com/ovrclk/akash/releases/download/v0.12.1/akash_0.12.1_linux_amd64.zip 
+#unzip akash_0.12.1_linux_amd64.zip 
+#cd akash_0.12.1_linux_amd64 
+#sudo cp akash /usr/local/bin 
+#cd ~
 
 Create new Akash address:
 
