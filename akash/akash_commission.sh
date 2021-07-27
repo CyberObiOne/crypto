@@ -4,7 +4,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 DELEGATOR='Delegator_address' # your address created or imported
 VALIDATOR='Validator_address' # can get from Keplr (https://wallet.keplr.app/#/akashnet/stake?modal=detail&validator=akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073) Forbole, as example
-PASWD='Your_pass' # from 19 line of ReadMe file
+PASWD='Your_pass' # from 22 line of ReadMe file
 DELAY=57600 #in secs # it depends of your stake
 ACC_NAME=Akash
 for ((; ;));
@@ -23,7 +23,6 @@ for ((; ;));
         echo -e "BALANCE: ${GREEN}${BAL}${NC}uakt\n"
         echo -e "Stake ALL\n"
         COMMISSION=$((${BAL} - 500)) # commission fees
-        echo $TEST
         echo -e "${PASWD}\n" | ./akash tx staking delegate ${VALIDATOR} ${COMMISSION}uakt --from ${ACC_NAME} --fees 300uakt -y #delegate claim rewards
         for (( timer=${DELAY}; timer>0; timer-- ))
         do
