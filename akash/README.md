@@ -21,7 +21,7 @@ Create new Akash address:
 ```
 akash keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND"
 ```
-You need to setup a passwrod. It will be used in future to confirm your transactions.
+You need to setup a password. It will be used in future to confirm your transactions.
 
 If you want to export existing address:
 ```
