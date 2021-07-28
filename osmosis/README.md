@@ -54,14 +54,28 @@ Create new Osmosis address:
 Please, in below command use your own "$KEY_NAME" and "$KEYRING_BACKEND" # --keyring-backend string   Select keyring's backend (os|file|test) (default "os")
 
 ```
-osmosisd keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND"
+$ osmosisd keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND"
 ```
 You need to setup a password. It will be used in future to confirm your transactions.
 
 If you want to export existing address:
 
 ```
-osmosisd keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND" --recover
+$ osmosisd keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND" --recover
+
+> Enter your bip39 mnemonic
+
+Enter keyring passphrase:
+Re-enter keyring passphrase:
+
+- name: Osmosis
+  type: local
+  address: ---- # your wallet ID
+  pubkey: -----
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+
 ```
 You will need to input your current menemonic. If you creates an address from previous command, you don't need to execute this one.
 
