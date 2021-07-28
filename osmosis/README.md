@@ -81,4 +81,14 @@ You will need to input your current menemonic. If you creates an address from pr
 
 Create a bash script: osmosis_comission.sh
 
+Due to reward coming once per day - setup a cronjob:
+
+```
+$ crontab -e
+```
+
+Than setup a time and path to your script, as example:
+```
+05 20 * * * bash /home/osmosis_comission.sh
+```
 
