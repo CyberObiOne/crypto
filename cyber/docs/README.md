@@ -1,1 +1,1 @@
-Here you can find differnt docs "How to ..." in Cyber project.
+Here you can find different docs "How to ..." in Cyber project.
