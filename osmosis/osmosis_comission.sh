@@ -6,7 +6,7 @@ DELEGATOR='Delegator_address' # your address created or imported
 VALIDATOR='Validator_address' # can get from Keplr (https://wallet.keplr.app/#/osmosis/stake?modal=detail&chainId=osmosis-1&validator=osmovaloper13tk45jkxgf7w0nxquup3suwaz2tx483xe832ge) - Bro_n_Bro validator id
 PASWD='Your_pass_from_keyring' # 57 or 64 line from Readme file
 ACC_NAME='Your_account_name'
-NODE='node_IP' # Don't change that endpoint - it's our Validator node
+NODE='https://osmosis.stakesystems.io:2053' # Don't change that endpoint
 KEYRING='file' # it can be different, reffer to 54 line in Readme file
 CHAIN_ID='osmosis-1' # Don't change this parameter 
 for ((; ;));
