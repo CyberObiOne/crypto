@@ -79,14 +79,14 @@ Re-enter keyring passphrase:
 ```
 You will need to input your current menemonic. If you creates an address from previous command, you don't need to execute this one.
 
-Create a bash script: cosmos_comission.sh
+Create a bash script: cosmos_commission.sh
 
 Start script in screen:
 
 ```
 screen -S cosmos_delegation
 cd /path/to/your/script
-bash cosmos_comission.sh
+bash cosmos_commission.sh
 ```
 
 
