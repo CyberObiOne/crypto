@@ -1,7 +1,7 @@
 First of all update your current system (Ubuntu) 
 ```
 $ sudo apt update 
-$ sudo apt install curl wget git make unzip -y
+$ sudo apt install curl wget git make unzip jq -y
 ```
 Now download the Go language binary archive file using following link. To find and download latest version available version go to official [download page](https://golang.org/dl/)
 
