@@ -9,13 +9,14 @@ PASWD='Your_pass' # from 22 line of ReadMe file
 DELAY=57600 #in secs # it depends on your stake
 NODE='http://api.cosmos.network:443'
 CHAIN_ID='cosmoshub-4'
+KEYRING='file'
 for ((; ;));
  do
         BAL=$(gaiad query bank balances ${DELEGATOR} --node ${NODE} -o json | jq -r '.balances[].amount'); #current balance
         echo ${BAL}
         echo -e "BALANCE: ${GREEN}${BAL}${NC} uakt\n"
         echo -e "Claim rewards\n"
-        echo -e "${PASWD}\n" | gaiad tx distribution withdraw-rewards ${VALIDATOR} --from ${ACC_NAME} --node ${NODE} --chain-id ${CHAIN_ID} --fees 100uatom  -y #claim rewards
+        echo -e "${PASWD}\n" | gaiad tx distribution withdraw-rewards ${VALIDATOR} --from ${ACC_NAME} --node ${NODE} --chain-id ${CHAIN_ID} --keyring-backend ${KEYRING} --fees 100uatom  -y #claim rewards
         for (( timer=10; timer>0; timer-- ))
         do
                 printf "* sleep for ${RED}%02d${NC} sec\r" $timer
@@ -25,7 +26,7 @@ for ((; ;));
         echo -e "BALANCE: ${GREEN}${BAL}${NC}uakt\n"
         echo -e "Stake ALL\n"
         COMMISSION=$((${BAL} - 500)) # balance minus commission fees for paying transaction fees
-        echo -e "${PASWD}\n" | gaiad tx staking delegate ${VALIDATOR} ${COMMISSION}uatom --from ${ACC_NAME} --node ${NODE} --chain-id ${CHAIN_ID} --fees 200uatom -y #delegate claim rewards
+        echo -e "${PASWD}\n" | gaiad tx staking delegate ${VALIDATOR} ${COMMISSION}uatom --from ${ACC_NAME} --node ${NODE} --chain-id ${CHAIN_ID} --keyring-backend ${KEYRING} --fees 200uatom -y #delegate claim rewards
         for (( timer=${DELAY}; timer>0; timer-- ))
         do
                 printf "* sleep for ${RED}%02d${NC} sec\r" $timer
