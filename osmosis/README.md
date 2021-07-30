@@ -1,7 +1,7 @@
 First of all update your current system (Ubuntu) 
 ```
 $ sudo apt update 
-$ sudo apt install curl wget git make unzip jq -y
+$ sudo apt install curl wget git make unzip jq screen -y
 ```
 Now download the Go language binary archive file using following link. To find and download latest version available version go to official [download page](https://golang.org/dl/)
 
@@ -79,7 +79,7 @@ Re-enter keyring passphrase:
 ```
 You will need to input your current menemonic. If you creates an address from previous command, you don't need to execute this one.
 
-Create a bash script: osmosis_comission.sh
+Create a bash script: osmosis_commission.sh
 
 Due to reward coming once per day - setup a cronjob:
 
@@ -89,6 +89,6 @@ $ crontab -e
 
 Than setup a time and path to your script, as example:
 ```
-05 20 * * * bash /home/osmosis_comission.sh
+05 20 * * * bash /path/to/your/script/osmosis_commission.sh
 ```
 
