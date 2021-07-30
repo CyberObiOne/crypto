@@ -6,7 +6,7 @@ DELEGATOR='Delegator_address' # your address created or imported
 VALIDATOR='Validator_address' # can get from Keplr (https://wallet.keplr.app/#/akashnet/stake?modal=detail&validator=akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073) Forbole, as example
 PASWD='Your_pass' # from 22 line of ReadMe file
 DELAY=57600 #in secs # it depends of your stake
-ACC_NAME=Akash
+ACC_NAME='Your_account_name' #Account name from Keyring
 for ((; ;));
  do
         BAL=$(./akash query bank balances ${DELEGATOR}  -o json | jq -r '.balances[].amount'); #current balance
