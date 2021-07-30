@@ -1,4 +1,4 @@
-First of all update your current system (Ubuntu) sudo apt update sudo apt install curl wget git make unzip -y
+First of all update your current system (Ubuntu) sudo apt update sudo apt install curl wget git make unzip jq screen -y
 
 Set variables
 ```
@@ -30,3 +30,11 @@ akash keys add "$KEY_NAME" --keyring-backend "$KEYRING_BACKEND" --recover
 You will need to input your current menemonic. If you creates an address from previous command, you don't need to execute this one.
 
 Create a bash script: akash_commission.sh
+
+Start script in screen:
+
+```
+screen -S cosmos_delegation
+cd /path/to/your/script/
+bash akash_commission.sh
+```
