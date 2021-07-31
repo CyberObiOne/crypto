@@ -11,7 +11,7 @@ KEYRING='file' # it can be different, reffer to 54 line in Readme file
 CHAIN_ID='osmosis-1' # Don't change this parameter 
 for ((; ;));
  do
-        BAL=$(osmosisd query bank balances ${DELEGATOR} --node ${NODE}  -o json | jq -r '.balances[7].amount'); #current balance
+        BAL=$(osmosisd query bank balances ${DELEGATOR} --node ${NODE}  -o json --output=json --denom=uosmo | jq -r '.amount'); #current balance
         echo ${BAL}
         echo -e "BALANCE: ${GREEN}${BAL}${NC} uosmo\n"
         echo -e "Claim rewards\n"
@@ -21,7 +21,7 @@ for ((; ;));
                 printf "* sleep for ${RED}%02d${NC} sec\r" $timer
                 sleep 1
         done
-        BAL=$(osmosisd query bank balances ${DELEGATOR} --node ${NODE} -o json | jq -r '.balances[7].amount'); # balance after claim
+        BAL=$(osmosisd query bank balances ${DELEGATOR} --node ${NODE} -o json --output=json --denom=uosmo | jq -r '.amount'); # balance after claim
         echo -e "BALANCE: ${GREEN}${BAL}${NC}uosmo\n"
         echo -e "Stake ALL\n"
         echo -e "${PASWD}\n" | osmosisd tx staking delegate ${VALIDATOR} ${BAL}uosmo --from ${ACC_NAME} --node ${NODE} --keyring-backend ${KEYRING} --chain-id ${CHAIN_ID} -y #delegate claim rewards
