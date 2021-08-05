@@ -9,7 +9,7 @@ Type Heroes in search bar and press Enter.
 
 Here we want to ask you for small introduction: 
 
-Who are you, what networks you are validating, your skills, your contributions to this project/Cosmos ecosystem. You can check my link as example. 
+Who are you, what networks you are validating, your skills, your contributions to this project/Cosmos ecosystem. You can check my [link](https://rebyc.cyber.page/search/CyberObiOne) as example. 
 
 We incentive anonymous validators. Please, don’t share your private information here.
 
