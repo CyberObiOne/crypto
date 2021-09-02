@@ -1,3 +1,7 @@
+<h3>Please, use these scripts on your own risks.</h3>
+
+<h4>I'm not responsible for mnemonic saving. If you server will be compromised or you lost access to it - I can't help you with it.</h4>
+
 First of all update your current system (Ubuntu) sudo apt update sudo apt install curl wget git make unzip jq screen -y
 
 Set variables
