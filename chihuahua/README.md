@@ -41,7 +41,7 @@ Clone current Huahua Git repo:
 ```
 $ git clone https://github.com/ChihuahuaChain/chihuahua.git
 ```
-Than build Persistence CLI:
+Than build Huahua CLI:
 
 ```
 $ cd chihuahua
